@@ -18,6 +18,83 @@ Data types:
 		SET ,	: DS : it wil not allow the  dup , order is mixed : {}
 		Tuple , : DS : it will allow the dup : but it can not modify  , order is user enter order  : ()
 		Dict 	: key - value 
+
+
+====================
+
+		REST End Point : 
+				FastAPi 
+
+
+		Step 1 : 
+				mkdir fastapidemo1
+				cd fastapidemo1
+		Step 2 : 
+				python -m venv venv
+		Step 3 : 
+				venv\Scripts\activate
+
+		Step 4 : Fast Api 
+			
+			python -m pip install fastapi uvicorn 
+
+				fastapi : api creation 
+				uvicorn : Appliction run (Server )
+
+		Step 5 :  open the VS code in same Location : 
+
+					(venv) D:\GenAIB2\Day12\fastapidemo1>code .					
+
+		Step 6 : under the fastapiDemo project 
+				create a main.py file 
+				
+		Step 7 : 
+			inside main.py 
+	
+
+			from fastapi import FastAPI
+			app=FastAPI();
+
+			@app.get("/")
+			def hello():
+    				return {"message":"Hello ! my First Fast APi Application "}
+
+		Step 8: run the application 
+			python -m uvicorn main:app --reload
+
+		Step 9 : open this url in browser 
+				http://127.0.0.1:8000/
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
 		
 

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee Management</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap header-content">
+      <div class="brand-wrap">
+        <div class="brand-mark">P</div>
+        <div class="brand">PeopleDesk <span>Employee Management</span></div>
+      </div>
+      <a href="/docs" target="_blank" rel="noopener">API Docs ↗</a>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="intro">
+      <div class="intro-copy">
+        <p class="eyebrow">TEAM OPERATIONS</p>
+        <h1>People hub</h1>
+        <p>Keep your workforce organized, searchable, and ready for action.</p>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Employees</span>
+        <strong id="totalCount">0</strong>
+        <span class="stat-sub">active records</span>
+      </div>
+    </div>
+    <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+    <section class="card form-card">
+      <div class="section-heading">
+        <h2 id="formTitle">Add employee</h2>
+        <p>Fill in the details below to save a new record.</p>
+      </div>
+      <form id="employeeForm">
+        <div class="fields">
+          <label>Employee ID<input id="eid" type="number" min="1" step="1" placeholder="e.g. 103" required></label>
+          <label>Full name<input id="name" type="text" maxlength="50" placeholder="e.g. Krishna" required></label>
+          <label>Age<input id="age" type="number" min="18" max="100" step="1" placeholder="e.g. 25" required></label>
+          <label>Salary (₹)<input id="salary" type="number" min="0" step="1" placeholder="e.g. 45000" required></label>
+          <label>Designation<input id="desig" type="text" maxlength="50" placeholder="e.g. Developer" required></label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn primary" id="saveBtn">+ Add employee</button>
+          <button type="button" class="btn ghost" id="clearBtn">Clear form</button>
+        </div>
+      </form>
+    </section>
+    <section class="card table-card">
+      <div class="table-header">
+        <div>
+          <h2>Employee records</h2>
+          <p>View and manage saved employees</p>
+        </div>
+        <div class="table-actions">
+          <button class="btn ghost" id="refreshBtn">↻ Refresh</button>
+          <button class="btn danger" id="deleteAllBtn">Delete all</button>
+        </div>
+      </div>
+      <label class="search-label" for="search">Search employees</label>
+      <input id="search" class="search" type="search" placeholder="Search by ID or name...">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Salary</th>
+              <th>Designation</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="employeeRows">
+            <tr><td colspan="6" class="empty">Loading employees...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer>Built with FastAPI · MySQL · HTML · CSS · JavaScript</footer>
+  </main>
+
+</body>
+</html>

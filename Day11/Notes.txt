@@ -1,0 +1,66 @@
+Basics : 
+    condations : if , else , elif , , 
+    for m while 
+    break  , continue , pass , self , 
+    operators 
+    Data TYpes : 
+    List , Set , Tuple, Dict ,
+    Python ----------> Database (Mysql ):
+    CRUD operations : 
+    WEB APPliction : 
+        Front End :                 --> we dont have it in this TOC/ CONTENT (self learning )
+                        HTML 
+                        CSS 
+                        javaScript ---> Angular / React JS 
+        BackEnd :
+                        Python(FastAPI)---> Rest End Points (Rest APIs)
+                        pydentic 
+        Database :
+                        Mysql 
+---------------------------------------------------------------
+REST API (Python)
+        ------Fast API
+        ------Django
+        ------Falsk  
+REST  ;
+                HTTP metods:
+            Send ---------POST 
+            Read--------> GET 
+            update------> PUT 
+            Delete -----> DELETE 
+
+        OOps : 
+                class and Object 
+                Inheritance :  
+                Polymorphism 
+                Abstraction 
+                Encupulation 
+
+
+Employee : 
+            Configuration : 
+                                import db , user , pas , url  : 100 
+             Insert  : 
+                            1 line 
+            Dispply 
+                            1 line   
+            update
+                            
+                           1 line   
+            Delete 
+                            line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
